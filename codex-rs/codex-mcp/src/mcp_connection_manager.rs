@@ -722,6 +722,10 @@ impl McpConnectionManager {
         }
     }
 
+    pub fn shutdown(&mut self) {
+        self.clients.clear();
+    }
+
     pub fn has_servers(&self) -> bool {
         !self.clients.is_empty()
     }
